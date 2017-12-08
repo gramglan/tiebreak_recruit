@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* --------------------------------
+
+Site Name: [  ]
+Site URI: [  ]
+Description: [ ]
+Version: [ 1.0 ]
+Author: gramglan
+Author URI: gramglan.work
+
+//メディアクエリ設定
+標準はmedium
+@include mq {}
+
+//モバイル端末ー縦向き
+'xsmall': 320px,
+//モバイル端末ー横向き
+'small' : 600px,
+//タブレット端末ー縦向き
+'medium': 768px,
+//タブレット端末ー横向き＆PCサイズ
+'large' : 1024px,
+//1280px以上
+'xlarge': 1280px,
+
+@include mq(xsmall){
+}
+@include mq(small){
+}
+@include mq(medium){
+}
+@include mq(large){ 
+}
+@include mq(xlarge){
+}
+
+-------------------------------- */
+/* font-family @include font;*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@mixin font{
+  font-family: 'Noto Sans Japanese', sans-serif;
+}
+
+@font-face {
+  font-family: "din";
+  src: url("../font/DIN Alternate Regular.eot?") format('eot'),
+       url("../font/DIN Alternate Regular.woff2") format('woff2'),
+       url("../font/DIN Alternate Regular.woff") format('woff'),
+       url("../font/DIN Alternate Regular.otf")  format('opentype');
+}
+@mixin din {
+  font-family: "din";
+	letter-spacing: .5px;
+}
+
+/* SITE COLOR */
+
+/* mixin
+mixinの編集
+・汎用的に編集する箇所は_mixin.scssに記載
+　他にはminin/_common.scssないのhover処理など。
+・フォントサイズはpxの他にremを自動指定
+・他サイト単位で追加する場合は_common.scssに追記もしくはmixin用の@importを追加
+*/
+@import "mixin";
+@import "ajax/_animate";
+
+/* 基本設定 */
+@import "common";
+
+/* レイアウト設定 */
+@import "header";
+@import "footer";
+
+/* 各ページ */
+@import "parts";
+@import "top";
+@import "company";
+@import "system";
+@import "interview";
+@import "recruit";

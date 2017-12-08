@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* --------------------------------
+MIXIN
+- gramglan
+
+//メディアクエリ設定
+標準はmedium
+@include mq {}
+
+//モバイル端末ー縦向き
+'xsmall': 320px,
+//モバイル端末ー横向き
+'small' : 600px,
+//タブレット端末ー縦向き
+'medium': 768px,
+//タブレット端末ー横向き＆PCサイズ
+'large' : 1024px,
+//1280px以上
+'xlarge': 1280px,
+
+@include mq(xsmall){
+}
+@include mq(small){
+}
+@include mq(medium){
+}
+@include mq(large){
+}
+@include mq(xlarge){
+}
+-------------------------------- */
+
+//アンカータグ用のリンク設定（fixedの相殺）
+.ancker{
+	display: block;
+	@include mq(xsmall){
+		margin-top: -50px;
+		padding-top: 50px;
+	}
+	@include mq(small){
+	}
+	@include mq(medium){
+		margin-top: -59px;
+		padding-top: 59px;
+	}
+	@include mq(large){
+		margin-top: -110px;
+		padding-top: 110px;
+	}
+	@include mq(xlarge){
+	}
+
+}
+
+
+#p-title{
+	background: #222;
+	text-align: center;
+	position: relative;
+	&::before{
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .6);
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+	}
+	&.company{
+		background: url(../img/head-company.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.system{
+		background: url(../img/head-system.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.recruit{
+		background: url(../img/head-recruit.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.wrap{
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		@include w_auto;
+		@include flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		@include mq(xsmall){
+			height: 180px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+		}
+		@include mq(large){
+			height: 300px;
+		}
+		@include mq(xlarge){
+		}
+		h2{
+			@include font-size(30);
+			@include din;
+		}
+		p{
+			@include font-size(12);
+		}
+	}
+}
+
+
+#n-title{
+	background: #222;
+	text-align: center;
+	position: relative;
+	&::before{
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .6);
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+	}
+	&.company{
+		background: url(../img/head-company.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.system{
+		background: url(../img/head-system.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.recruit{
+		background: url(../img/head-recruit.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.interview{
+		background: url(../img/head-interview.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.message{
+		background: url(../img/head-message.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&.form{
+		background: url(../img/head-form.jpg) no-repeat center center;
+		background-size: cover;
+	}
+
+	.wrap{
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		align-items: center;
+		@include w_auto;
+		@include flex;
+		justify-content: center;
+//		align-items: center;
+
+		@include mq(xsmall){
+			height: 100px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+		}
+		@include mq(large){
+			height: 180px;
+		}
+		@include mq(xlarge){
+		}
+		a{
+			color: #fff;
+			@include hover;
+			display: block;
+
+			@include font-size(12);
+			@include mq(xsmall){
+				//padding: 32px 0;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				//padding: 64px 0;
+			}
+			@include mq(xlarge){
+			}
+
+			i{
+				margin-right: 1em;
+			}
+			span{
+				@include font-size(7);
+			}
+		}
+	}
+}

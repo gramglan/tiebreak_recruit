@@ -1,0 +1,531 @@
+@charset "UTF-8";
+/* --------------------------------
+MIXIN
+- gramglan
+
+//メディアクエリ設定
+標準はmedium
+@include mq {}
+
+//モバイル端末ー縦向き
+'xsmall': 320px,
+//モバイル端末ー横向き
+'small' : 600px,
+//タブレット端末ー縦向き
+'medium': 768px,
+//タブレット端末ー横向き＆PCサイズ
+'large' : 1024px,
+//1280px以上
+'xlarge': 1280px,
+
+@include mq(xsmall){
+}
+@include mq(small){
+}
+@include mq(medium){
+}
+@include mq(large){
+}
+@include mq(xlarge){
+}
+
+
+-------------------------------- */
+@include mq(large){
+
+.to-recruit{
+	display: inline-block;
+	border: 2px solid $b;
+	color: $b;
+	padding: 16px 32px;
+	@include hover;
+	&:hover{
+		border: 2px solid $b;
+	}
+}
+#bg1{background: url(../img/bg-2.jpg) no-repeat center 100px;background-attachment: fixed; background-size: cover;}
+#bg2{background:url(../img/bg-1.png) no-repeat center 0px;background-attachment: auto; background-size: contain;}
+#bg3{background:url(../img/bg-1-1.png) no-repeat center bottom;background-attachment: auto; background-size: contain;}
+}
+.mess-wrap{
+	background: url(../img/bg-message.jpg) no-repeat center 200px;
+	background-size: auto;
+}
+#message{
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 32px;
+
+	@include mq(xsmall){
+		padding: 16px;
+	}
+	@include mq(small){
+	}
+	@include mq(medium){
+		padding: 24px;
+	}
+	@include mq(large){
+		padding: 32px;
+	}
+	@include mq(xlarge){
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+	h3{
+		padding: 16px 0 16px 16px;
+		&:after{
+			content: "";
+			width: 40px;
+			height: 5px;
+			background: #ccc;
+
+			display: block;
+			@include mq(xsmall){
+				margin: 24px 0 0;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				margin: 32px auto;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+		}
+		@include mq(xsmall){
+			text-align:left;
+			@include font-size(13);
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			text-align:center;
+			@include font-size(15);
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+	}
+	p{
+		@include font-size(11);
+		padding: 16px;
+		text-align: left;
+		line-height: 1.8;
+		color: #444;
+	}
+
+	.sign{
+		text-align: right;
+	}
+
+}
+
+#recruit{
+	border-top: 1px solid #ddd;
+
+	ul.tab{
+		text-align: center;
+		li{
+			@include font-size(12);
+			@include mq(xsmall){
+				width: 100%;
+				margin-bottom: 8px;
+				display: block;
+			}
+			@include mq(large){
+				display: inline-block;
+				width: auto;
+			}
+			a{
+				display: block;
+				background:  $b;
+				border-radius: 50px;
+				line-height: 1;
+				padding: 16px;
+				color: #fff;
+				@include hover;
+
+			}
+		}
+	}
+	.recruit{
+		@include w_auto;
+		border-top: 1px solid #eee;
+
+
+		@include mq(xsmall){
+			padding: 16px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 32px;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+
+		h3{
+			text-align: center;
+			font-weight: normal;
+			padding: 8px;
+			margin-bottom: 16px;
+		}
+
+		.col2{
+			@include flex;
+
+			@include mq(xsmall){
+				padding: 0px;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				//padding: 16px;
+			}
+			@include mq(xlarge){
+			}
+
+
+			div{
+
+				@include mq(xsmall){
+					width: 100%;
+					padding: 0px;
+					padding-bottom: 24px;
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					width: 48%;
+					margin: 1%;
+					//padding: 16px;
+					border: 1px solid #ddd;
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+				}
+
+				h4{
+					text-align: center;
+					padding: 16px;
+				}
+				ul{
+					padding: 8px;
+					@include flex;
+					li{
+						padding: 4px;
+						@include mq(xsmall){
+							width: 100%;
+						}
+						@include mq(small){
+						}
+						@include mq(medium){
+							flex: 1;
+
+						}
+						@include mq(large){
+						}
+						@include mq(xlarge){
+						}
+
+						a{
+							display: block;
+							padding: 1px;
+							border: 1px solid #ddd;
+							img{
+								width: 100%; height: auto;
+							}
+						}
+					}
+				}
+				p{
+					text-align: center;
+					@include font-size(10);
+					padding: 8px 0;
+				}
+
+			}
+
+			.freshers{
+			}
+
+			.career{
+			}
+
+
+		}
+
+	}
+
+	.faq{
+		@include w_auto;
+
+		@include mq(xsmall){
+			padding: 16px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 32px;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+		h3{
+			text-align: center;
+			font-weight: normal;
+			padding: 8px;
+			margin-bottom: 16px;
+		}
+
+		ul{
+			max-width: 800px;
+			margin: 16px auto;
+
+			li{
+				border: 1px solid #ddd;
+				margin-bottom: 8px;
+
+				div{
+					@include flex;
+					position: relative;
+					p{}
+					.icon{
+						 width: 50px;
+						 height: 50px;
+						 text-align: center;
+						 color: #fff;
+
+						 line-height: 50px;
+						 @include mq(xsmall){
+							 position: absolute;
+							 left: 0; top: 0;
+						 }
+						 @include mq(small){
+						 }
+						 @include mq(medium){
+						 }
+						 @include mq(large){
+						 }
+						 @include mq(xlarge){
+						 }
+
+					}
+					.text{
+						border-left: 1px solid #ddd;
+						 width: 100%;
+						min-height: 50px;
+						color: #333;
+						padding: 16px;
+						padding-left: 16px;
+						margin-left: 50px;
+						strong{
+							color: $r;
+							@include font-size(13);
+							display: inline-block;
+							padding: 2px;
+						}
+						@include mq(xsmall){
+							@include font-size(9);
+
+						}
+						@include mq(small){
+						}
+						@include mq(medium){
+							@include font-size(9);
+						}
+						@include mq(large){
+						}
+						@include mq(xlarge){
+						}
+
+					}
+				}
+
+				.faq-q{
+					border-bottom: 1px solid #ddd;
+					.icon{
+						color: #ff0000;
+					}
+					.text{}
+				}
+				.faq-a{
+					.icon{
+						color: #2CA53A;
+					}
+					.text{}
+				}
+			}
+		}
+
+	}
+
+
+	.step{
+
+
+
+		background: #fff;
+		background: url(../img/icon-com-bg.png) repeat;
+		background-size: contain;
+
+		@include mq(xsmall){
+			padding: 16px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 32px;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+		h3{
+			text-align: center;
+			font-weight: normal;
+			padding: 8px;
+			margin-bottom: 16px;
+		}
+		ul{
+			max-width: 800px;
+			margin: 16px auto;
+			@include font-size(11);
+			li{
+				padding: 16px;
+				text-align: center;
+				background: #fff;
+				border-radius: 8em;
+				span{
+					display: block;
+					@include font-size(8);
+				}
+			}
+			.first{
+				 border: 1px solid #ddd;
+			}
+			.naitei{
+				 background: $y;
+			}
+			.arrow{
+				background: none;
+			}
+			.fin{
+				background: $r;
+				color: #fff;
+			}
+
+		}
+
+		p{
+			@include font-size(9);
+
+			@include mq(xsmall){
+				text-align: left;
+			}
+			@include mq(medium){
+				text-align: center;
+			}
+		}
+	}
+
+
+	.detail{
+
+		border-top: 1px solid #eee;
+
+
+		@include mq(xsmall){
+			padding: 16px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 32px;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+		h3{
+			text-align: center;
+			font-weight: normal;
+			padding: 8px;
+			margin-bottom: 16px;
+		}
+		table{
+			border-collapse: collapse;
+			max-width: 800px;
+			margin: 16px auto;
+			tr{
+				th{
+
+					border: 1px solid #ddd;
+
+					@include mq(xsmall){
+						 background: #eee;
+						 @include font-size(9);
+						 padding: 8px;
+						 width: 30%;
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+
+						@include font-size(11);
+						padding: 16px;
+					}
+					@include mq(large){
+					}
+					@include mq(xlarge){
+					}
+
+
+				}
+				td{
+					padding: 16px;
+					border: 1px solid #ddd;
+
+					@include mq(xsmall){
+						 background: #fff;
+						 @include font-size(9);
+						 padding: 8px;
+						 width: 70%;
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+						@include font-size(11);
+						padding: 16px;
+					}
+					@include mq(large){
+					}
+					@include mq(xlarge){
+					}
+
+				}
+			}
+		}
+
+	}
+
+
+
+
+
+}

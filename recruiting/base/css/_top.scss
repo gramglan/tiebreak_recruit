@@ -1,0 +1,820 @@
+@charset "UTF-8";
+/* --------------------------------
+MIXIN
+- gramglan
+
+//メディアクエリ設定
+標準はmedium
+@include mq {}
+
+//モバイル端末ー縦向き
+'xsmall': 320px,
+//モバイル端末ー横向き
+'small' : 600px,
+//タブレット端末ー縦向き
+'medium': 768px,
+//タブレット端末ー横向き＆PCサイズ
+'large' : 1024px,
+//1280px以上
+'xlarge': 1280px,
+
+@include mq(xsmall){
+}
+@include mq(small){
+}
+@include mq(medium){
+}
+@include mq(large){
+}
+@include mq(xlarge){
+}
+-------------------------------- */
+#contents{
+	@include mq(xsmall){
+		padding-top: 50px;
+	}
+	@include mq(small){
+	}
+	@include mq(medium){
+		padding-top: 108px;
+	}
+	@include mq(large){
+	}
+	@include mq(xlarge){
+	}
+
+	h2{
+		@include mq(xsmall){
+			@include font-size(13);
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			@include font-size(18);
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+	}
+
+}
+
+
+#top-company{
+	background: url(../img/icon-com-bg.png) no-repeat center center;
+	background-size: cover;
+
+	padding-bottom: 32px;
+	@include mq(xsmall){
+		padding-top: 40px;
+	}
+	@include mq(small){
+	}
+	@include mq(medium){
+		padding-top: 80px;
+	}
+	@include mq(large){
+	}
+	@include mq(xlarge){
+	}
+
+
+	h2{
+		color: $b;
+		text-align: center;
+
+		@include mq(xsmall){
+			padding-top: 8px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding-top: 0px;
+		}
+		@include mq(large){
+			padding-top: 16px;
+		}
+		@include mq(xlarge){
+		}
+
+	}
+
+	ul{
+		@include flex;
+		@include w_auto;
+		@include mq(xsmall){
+			padding: 8px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+		li{
+			flex: 1;
+			text-align: center;
+			a{
+				display: block;
+				padding: 0px;
+				@include hoverimg2;
+				h3{
+					color: #333;
+					padding: 8px;
+					@include mq(xsmall){
+						@include font-size(8);
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+						@include font-size(12);
+					}
+					@include mq(large){
+					}
+					@include mq(xlarge){
+					}
+
+				}
+			}
+
+		}
+	}
+}
+
+#top-system{
+
+	h2{
+
+		color: #fff;
+		text-align: center;
+		background: url(../img/system-bg.png) no-repeat center center;
+		background-size: cover;
+		@include mq(xsmall){
+			padding: 24px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 48px;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+	}
+
+	ul{
+		@include flex;
+		@include w_auto;
+		li{
+
+			@include mq(xsmall){
+				width: 100%;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				flex:1;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+
+			&.system-1{
+				background: url(../img/system-1-bg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			&.system-2{
+				background: url(../img/system-2-bg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			&.system-3{
+				background: url(../img/system-3-bg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+
+			a{
+				display: block;
+				@include hover;
+				background: rgba(0,0,0,.5);
+				text-align: center;
+				@include mq(xsmall){
+					padding: 24px 8px;
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					padding: 64px 8px;
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+				}
+
+				p.check{
+					position: relative;
+					display: inline-block;
+					background: $y;
+					border-radius: 4em;
+					color: #000;
+
+					line-height: 1;
+					padding: 8px 16px;
+					@include mq(xsmall){
+						@include font-size(6);
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+					}
+					@include mq(large){
+						@include font-size(9);
+					}
+					@include mq(xlarge){
+					}
+
+					&:after{
+						top: 100%;
+						left: 50%;
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+						border-color: rgba(136, 183, 213, 0);
+						border-top-color: $y;
+						border-width: 8px;
+						margin-left: -8px;
+					}
+
+				}
+				h3{
+					 color: #fff;
+					 font-weight: normal;
+					 padding-top: 8px;
+
+					 @include mq(xsmall){
+						 @include font-size(13);
+					 }
+					 @include mq(small){
+					 }
+					 @include mq(medium){
+						 @include font-size(14);
+					 }
+					 @include mq(large){
+						 @include font-size(18);
+					 }
+					 @include mq(xlarge){
+					 }
+
+				}
+
+			}
+
+
+
+		}
+
+	}
+
+}
+
+/*============================
+#top-interview
+============================*/
+#top-interview {
+	position: relative;
+	h2 {
+		text-align: center;
+		z-index: 100;
+		@include mq(xsmall){
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+		}
+		@include mq(large){
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+		@include mq(xlarge){
+		}
+		span {
+			display:block;
+			opacity: .1;
+			@include din;
+			padding-top: 30px;
+			@include mq(xsmall){
+				@include font-size(40);
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				@include font-size(60);
+			}
+			@include mq(xlarge){
+			}
+
+		}
+		strong {
+			display:block;
+			position: relative;
+			top: -40px;
+			@include mq(xsmall){
+				@include font-size(16);
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				@include font-size(20);
+			}
+			@include mq(xlarge){
+			}
+
+		}
+	}
+	ul {
+		@include w_auto;
+		@include flex;
+		@include mq(xsmall){
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+		li{
+			position: relative;
+			@include mq(xsmall){
+				width: 50%;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				width: 25%;
+			}
+			@include mq(large){
+				width: 25%;
+				justify-content: center;
+				padding-top: 150px;
+			}
+			@include mq(xlarge){
+			}
+
+			&.active{
+				opacity: .5;
+			}
+			a {
+				display: block;
+				@include mq(xsmall){
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+				}
+				@include mq(large){
+					@include hoverimg2;
+				}
+				@include mq(xlarge){
+				}
+				&:hover{
+					.detail{
+						opacity: .6;
+					}
+				}
+				div.stand {
+					background: #fff;
+					img {
+					}
+				}
+				div.detail {
+					width: 100%;
+					color: #fff;
+
+					align-items: center;
+					@include flex;
+					@include mq(xsmall){
+						justify-content: center;
+						text-align: center;
+						height:auto;
+						padding:16px 8px;
+						background-size: cover;
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+					}
+					@include mq(large){
+						justify-content: flex-start;
+						text-align: left;
+						position: absolute;
+						padding: 0 0 0 16px;
+						bottom: 50px;
+						left: 0;
+						height:270px;
+						background: url(../img/int-arrow-1.png) no-repeat;
+						background-size: contain;
+					}
+					@include mq(xlarge){
+					}
+					p{
+
+						@include mq(xsmall){
+							@include font-size(7);
+						}
+						@include mq(large){
+							@include font-size(8);
+						}
+					}
+					h3 {
+						@include font-size(14);
+						line-height: 1.2;
+					}
+				}
+			}
+		}
+		li.interview-1 {
+			@include mq(xsmall){
+				background: $r;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				background: none;
+				border-left: 10px solid $r;
+			}
+			@include mq(xlarge){
+			}
+			a {
+				display: block;
+				div.stand {
+					img {
+					}
+				}
+				div.detail {
+					@include mq(large){
+						background: url(../img/int-arrow-1.png) no-repeat;
+						background-size: contain;
+					}
+					p{
+					}
+					h3 {
+					}
+				}
+			}
+		}
+		li.interview-2 {
+
+			@include mq(xsmall){
+				background: $y;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				background: none;
+				border-left: 10px solid $y;
+			}
+			@include mq(xlarge){
+			}
+			a {
+				div.stand {
+					img {
+					}
+				}
+				div.detail {
+					color: #222;
+					@include mq(large){
+						background: url(../img/int-arrow-2.png) no-repeat;
+						background-size: contain;
+					}
+					p {
+					}
+					h3 {
+					}
+				}
+			}
+		}
+		li.interview-3 {
+			@include mq(xsmall){
+				background: $g;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				background: none;
+				border-left: 10px solid $g;
+			}
+			@include mq(xlarge){
+			}
+			a {
+				div.stand {
+					img {
+					}
+				}
+				div.detail {
+					@include mq(large){
+						background: url(../img/int-arrow-3.png) no-repeat;
+						background-size: contain;
+					}
+					p {
+					}
+					h3 {
+					}
+				}
+			}
+		}
+		li.interview-4 {
+			@include mq(xsmall){
+				background: $b;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+				background: none;
+				border-left: 10px solid $b;
+			}
+			@include mq(xlarge){
+			}
+			a {
+				div.stand {
+					img {
+					}
+				}
+				div.detail {
+					@include mq(large){
+						background: url(../img/int-arrow-4.png) no-repeat;
+						background-size: contain;
+					}
+					p {
+					}
+					h3 {
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#top-message{
+	background: url(../img/message-bg.png) no-repeat center center;
+	background-size: cover;
+	min-height: 400px;
+
+
+}
+
+
+#top-recruit{
+
+	h2{
+
+		color: #fff;
+		text-align: center;
+		background: url(../img/recruit-bg.png) no-repeat center center;
+		background-size: cover;
+		@include mq(xsmall){
+			padding: 24px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 48px;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+
+	}
+
+	ul{
+		@include flex;
+		@include w_auto;
+		li{
+
+			@include mq(xsmall){
+				flex: 100%;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				flex:1;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+
+			&.recruit-1{
+				background: url(../img/recruit-1-bg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			&.recruit-2{
+				background: url(../img/recruit-2-bg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			&.recruit-3{
+				background: url(../img/recruit-3-bg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+
+			a{
+				display: block;
+				@include hover;
+
+				background: rgba(0,0,0,.5);
+				text-align: left;
+				@include mq(xsmall){
+					padding: 24px 8px;
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					padding: 64px 8px;
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+				}
+
+				p.check{
+					position: relative;
+					color: #fff;
+
+					line-height: 1;
+					padding: 8px 32px 0;
+					@include mq(xsmall){
+						@include font-size(13);
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+						@include font-size(14);
+					}
+					@include mq(large){
+						@include font-size(18);
+					}
+					@include mq(xlarge){
+					}
+
+
+				}
+				h3{
+					 color: #fff;
+					 font-weight: normal;
+					 padding: 0px 32px;
+
+					 @include mq(xsmall){
+						 @include font-size(6);
+					 }
+					 @include mq(small){
+					 }
+					 @include mq(medium){
+					 }
+					 @include mq(large){
+						 @include font-size(9);
+					 }
+					 @include mq(xlarge){
+					 }
+
+				}
+
+			}
+
+
+
+		}
+
+	}
+
+}
+
+#top-main{
+	background: url(../img/visual.png) repeat-x center top;
+
+
+	position: relative;
+	@include mq(xsmall){
+		background-size: cover;
+		border-bottom: 10px solid $y;
+	}
+	@include mq(small){
+	}
+	@include mq(medium){
+		border-bottom: 20px solid $y;
+	}
+	@include mq(large){
+		background-size: 1600px;
+		border-bottom: 30px solid $y;
+
+	}
+	@include mq(xlarge){
+	}
+
+	.wrap{
+		//@include w_auto;
+		text-align: center;
+		@include mq(xsmall){
+			height: 160px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			height: 350px;
+		}
+		@include mq(large){
+			height: 400px;
+		}
+		@include mq(xlarge){
+		}
+		position: relative;
+		.visual{
+			position: relative;
+			z-index: 50;
+			&.under{
+
+				 margin-top: -110%;
+				z-index: 20;
+			}
+
+		}
+
+		.v-w{
+			background: url(../img/visual-under.jpg) no-repeat center top;
+			background-size: auto;
+
+			img{
+			}
+		}
+
+		h2{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			z-index: 100;
+			@include mq(xsmall){
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+
+			img{
+				height: auto;
+				position: relative;
+				@include mq(xsmall){
+					width: 180px;
+					bottom: -35px;
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					width: 320px;
+					bottom: -60px;
+				}
+				@include mq(large){
+					width: 478px;
+					bottom: -90px;
+				}
+				@include mq(xlarge){
+				}
+
+			}
+		}
+
+
+	}
+
+
+}

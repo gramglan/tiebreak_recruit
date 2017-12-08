@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/* --------------------------------
+MIXIN
+- gramglan
+
+//メディアクエリ設定
+標準はmedium
+@include mq {}
+
+//モバイル端末ー縦向き
+'xsmall': 320px,
+//モバイル端末ー横向き
+'small' : 600px,
+//タブレット端末ー縦向き
+'medium': 768px,
+//タブレット端末ー横向き＆PCサイズ
+'large' : 1024px,
+//1280px以上
+'xlarge': 1280px,
+
+@include mq(xsmall){
+	content: 'xsmall';
+}
+@include mq(small){
+	content: 'small';
+}
+@include mq(medium){
+	content: 'medium';
+}
+@include mq(large){
+	content: 'large';
+}
+@include mq(xlarge){
+	content: 'xlarge';
+}
+
+-------------------------------- */
+
+.tc{
+	&.y{
+		color: $y;
+	}
+	&.r {
+		color: $r;
+	}
+	&.b{
+		color: $b;
+	}
+	&.g{
+		color: $g;
+	}
+}
+
+.bc{
+	&.y{
+		background: $y;
+	}
+	&.r {
+		background: $r;
+	}
+	&.b{
+		background: $b;
+	}
+	&.g{
+		background: $g;
+	}
+}
+
+//インタビュー
+#int-visual{
+	background: #222;
+	max-width: 1400px;
+	margin: 0 auto;
+	@include mq(xsmall){
+		border-top: 2px solid #ccc;
+	}
+	@include mq(small){
+	}
+	@include mq(medium){
+		border-top:none;
+		&.p-interview-0{
+			background: url(../img/int-main-0.jpg) no-repeat center top;
+			background-size: cover;
+			padding-left: 15%;
+			.wrap{
+				@include mq(xsmall){
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					height: 300px;
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+				}
+
+			}
+		}
+		&.p-interview-1{
+			background: url(../img/int-main-1.jpg) no-repeat center top;
+			background-size: cover;
+			padding-right: 15%;
+			.wrap{
+				//justify-content: right;
+				flex-flow: row-reverse;
+			}
+		}
+		&.p-interview-2{
+			background: url(../img/int-main-2.jpg) no-repeat center top;
+			background-size: cover;
+			padding-left: 15%;
+		}
+		&.p-interview-3{
+			background: url(../img/int-main-3.jpg) no-repeat center top;
+			background-size: cover;
+			padding-right: 15%;
+			.wrap{
+				//justify-content: right;
+				flex-flow: row-reverse;
+			}
+		}
+		&.p-interview-4{
+			background: url(../img/int-main-4.jpg) no-repeat center top;
+			background-size: cover;
+			padding-right: 15%;
+			.wrap{
+				//justify-content: right;
+				flex-flow: row-reverse;
+			}
+		}
+
+	}
+	@include mq(large){
+	}
+	@include mq(xlarge){
+	}
+	a{
+		@include hover2;
+		display:block;
+	}
+	.wrap{
+		//justify-content: center;
+		@include mq(xsmall){
+			height: auto;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			height: 450px;
+			align-items: center;
+			position: relative;
+			@include flex;
+		}
+		@include mq(large){
+		}
+		@include mq(xlarge){
+		}
+		.title{
+			position: relative;
+			z-index: 100;
+			padding: 0;
+			&.-nd{
+				//float: right;
+			}
+			.ptitle{
+				background: #fff;
+				padding: 16px;
+				color: #444;
+				@include mq(xsmall){
+					border-top: 1px solid #ddd;
+				}
+				@include mq(medium){
+					border-top:none;
+				}
+				strong{
+					font-weight: normal;
+					@include font-size(16);
+				}
+				span{
+					font-weight: normal;
+
+					line-height: 1;
+					@include font-size(8);
+				}
+
+			}
+			img{
+				@include mq(xsmall){
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					display: none;
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+				}
+
+			}
+
+
+			h2{
+				&.y{
+					background: $y url(../img/int-bg-2.png) repeat;
+					background-size: cover;
+					strong,span{
+						color: #222;
+					}
+
+				}
+				&.r {
+					background: $r url(../img/int-bg-1.png) repeat;
+					background-size: cover;
+				}
+				&.b{
+					background: $b url(../img/int-bg-4.png) repeat;
+					background-size: cover;
+				}
+				&.g{
+					background: $g url(../img/int-bg-3.png) repeat;
+					background-size: cover;
+				}
+				&.msg{
+					background: #222;
+					background-size: cover;
+				}
+				@include mq(xsmall){
+					padding: 12px;
+					text-align: center;
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+					padding: 24px;
+					text-align: left;
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+				}
+
+				strong{
+					font-weight: normal;
+
+					color:#fff;
+					@include mq(xsmall){
+						@include font-size(18);
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+						@include font-size(28);
+					}
+					@include mq(large){
+					}
+					@include mq(xlarge){
+					}
+
+				}
+				span{
+					color: #fff;
+					font-weight: normal;display: block;
+
+					@include mq(xsmall){
+						@include font-size(11);
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+						@include font-size(12);
+					}
+					@include mq(large){
+					}
+					@include mq(xlarge){
+					}
+
+				}
+			}
+		}
+	}
+}
+
+#interview{
+	border-bottom: 1px solid #ddd;
+	.read{
+		@include w_auto;
+		p{
+			padding: 24px;
+			@include font-size(11);
+
+			@include mq(xsmall){
+				text-align: left;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				text-align: center;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+
+		}
+	}
+
+	.col2{
+		@include flex;
+		@include w_auto;
+		&.row-r{
+			@include mq(xsmall){
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				flex-flow: row-reverse;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+
+		}
+		li{
+			@include mq(xsmall){
+				margin-bottom: 0px;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				flex: 1;
+				margin-bottom: 14px;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+
+			img{
+				padding: 10px;
+			}
+
+			h3{
+				padding: 8px 24px 0 24px;
+				font-weight: normal;
+
+				@include mq(xsmall){
+					@include font-size(14);
+					padding-top: 24px;
+				}
+				@include mq(small){
+					@include font-size(12);
+				}
+				@include mq(medium){
+					//padding-top: 0px;
+					@include font-size(13);
+				}
+				@include mq(large){
+				}
+				@include mq(xlarge){
+					@include font-size(16);
+				}
+
+
+				&:after{
+					display: block;
+					content: "";
+					width: 32px;
+					height: 2px;
+					background: #ccc;
+					margin: 20px 0 0px;
+				}
+			}
+			p{
+				padding: 24px;
+
+				line-height: 1.8;
+				color: #333;
+				@include mq(xsmall){
+					@include font-size(10);
+				}
+				@include mq(large){
+					@include font-size(10);
+				}
+			}
+		}
+	}
+
+	.p-full{
+
+		@include w_auto;
+
+		@include flex;
+		justify-content: center;
+		align-items: center;
+
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+}

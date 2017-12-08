@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/* --------------------------------
+MIXIN
+- gramglan
+
+//メディアクエリ設定
+標準はmedium
+@include mq {}
+
+//モバイル端末ー縦向き
+'xsmall': 320px,
+//モバイル端末ー横向き
+'small' : 600px,
+//タブレット端末ー縦向き
+'medium': 768px,
+//タブレット端末ー横向き＆PCサイズ
+'large' : 1024px,
+//1280px以上
+'xlarge': 1280px,
+
+@include mq(xsmall){
+	content: 'xsmall';
+}
+@include mq(small){
+	content: 'small';
+}
+@include mq(medium){
+	content: 'medium';
+}
+@include mq(large){
+	content: 'large';
+}
+@include mq(xlarge){
+	content: 'xlarge';
+}
+
+-------------------------------- */
+
+
+#company{
+	h3{
+		text-align: center;
+		@include font-size(18);
+		padding: 32px 32px;
+	}
+
+	h2{
+		//background: $y;
+		text-align: center;
+		padding: 24px;
+		background: url(../img/int-bg-2.png) repeat center center;
+	}
+
+	hr{
+		border: none;
+		height: 1px;
+		background: #ddd;
+		width: 100%;
+	}
+
+	.read{
+
+
+		padding: 24px;
+		@include mq(xsmall){
+			text-align: left;
+			@include font-size(11);
+		}
+		@include mq(medium){
+			text-align: center;
+			@include font-size(12);
+		}
+		p{
+
+		}
+	}
+
+	.logo{
+		@include flex;
+		@include w_auto;
+		margin-bottom: 32px;
+		li{
+			text-align: center;
+			img{
+
+				height: auto;
+				@include mq(xsmall){
+					width: 70%;
+				}
+				@include mq(medium){
+					width: 70%;
+				}
+			}
+			h4{
+				background: $b;
+				color: #fff;
+				 font-weight: normal;
+				 padding: 12px 24px;
+				 @include font-size(11);
+				 border-radius: 8em;
+				 text-align:left;
+			}
+			p{
+				@include font-size(10);
+				 padding: 16px;
+				 text-align: left;
+			}
+
+			@include mq(xsmall){
+				width: 100%;
+				padding: 16px;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				width: 50%;
+				padding: 32px;
+			}
+			@include mq(large){
+			}
+			@include mq(xlarge){
+			}
+		}
+
+
+	}
+
+	.auto{
+		@include w_auto;
+		margin-bottom: 32px;
+		li{
+			text-align: center;
+			img{
+				width: 100%;
+				height: auto;
+			}
+			p{
+				@include font-size(10);
+			}
+		}
+		.bg-y{
+			text-align: left;
+			background: $y;
+			p{
+				padding: 24px;
+			}
+		}
+
+	}
+
+	.col3{
+		@include w_auto;
+		@include flex;
+		padding: 8px;
+		margin-bottom: 64px;
+		li{
+
+
+			@include mq(xsmall){
+				width:100%;
+				padding: 16px;
+			}
+			@include mq(small){
+			}
+			@include mq(medium){
+				width:50%;
+				padding: 16px;
+			}
+			@include mq(large){
+				width: 33.33333333332%;
+			}
+			@include mq(xlarge){
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+			h4{
+				background: $b;
+				color: #fff;
+				 font-weight: normal;
+				 padding: 12px;
+				 @include font-size(11);
+			}
+			p{
+				padding: 12px;
+				@include font-size(10);
+			}
+		}
+	}
+
+	.feature{
+		width: 100%;
+		background: #222;
+
+		@include mq(xsmall){
+			padding: 8px;
+		}
+		@include mq(small){
+		}
+		@include mq(medium){
+			padding: 16px;
+		}
+		@include mq(large){
+			padding: 24px;
+		}
+		@include mq(xlarge){
+		}
+		&.bg-r{
+			background: $r;
+			color: #fff;
+		}
+		&.bg-b{
+			background: $b;
+			color: #fff;
+		}
+		&.bg-g{
+			background: $g;
+			color: #fff;
+		}
+		&.bg-y{
+			background: $y;
+			color: #222;
+		}
+		ul{
+			@include w_auto;
+			@include flex;
+			li{
+
+				@include flex;
+				text-align: left;
+				justify-content: center;
+				align-items: center;
+				@include mq(xsmall){
+					flex:100%;
+				}
+				@include mq(small){
+				}
+				@include mq(medium){
+				}
+				@include mq(large){
+					flex: 1;
+				}
+				@include mq(xlarge){
+				}
+				img{
+					@include mq(xsmall){
+						padding: 16px;
+					}
+					@include mq(small){
+					}
+					@include mq(medium){
+					}
+					@include mq(large){
+					}
+					@include mq(xlarge){
+					}
+				}
+				div{
+					h4{
+						@include font-size(15);
+
+						@include mq(xsmall){
+							padding: 16px 8px;
+							text-align: center;
+						}
+						@include mq(small){
+						}
+						@include mq(medium){
+						}
+						@include mq(large){
+
+							text-align: left;
+						}
+						@include mq(xlarge){
+						}
+					}
+					p{
+						padding: 8px 8px 16px;
+						@include font-size(10);
+					}
+				}
+
+			}
+
+		}
+	}
+
+
+}
